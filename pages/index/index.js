@@ -60,17 +60,16 @@ Page({
       remainTimeText: showTime + ':00',
       taskName: logName
     })
-
     this.data.log = {
       name: logName,
-      startTime: Date.now(),
-      keepTime: keepTime,
+      startTime: startTime,
+      startTimeDesc: util.formatDate(startTime),
       endTime: keepTime + startTime,
+      endTimeDesc: util.formatDate(keepTime + startTime),
+      keepTime: keepTime,
       action: actionName[isRuning ? 'stop' : 'start'],
       type: timerType
     }
-
-    this.saveLog(this.data.log)
   },
 
   startNameAnimation: function() {
@@ -93,6 +92,8 @@ Page({
 
     // clear timer
     this.timer && clearInterval(this.timer)
+
+    this.saveLog()
   },
 
   updateTimer: function() {
@@ -138,8 +139,14 @@ Page({
     this.logName = e.detail.value
   },
 
-  saveLog: function(log) {
+  saveLog: function() {
     var logs = wx.getStorageSync('logs') || []
+    var log = this.data.log, end = Date.now()
+    // 考虑未完成的情况
+    if (end - log.startTime < log.keepTime) {
+      log.endTime = end
+      log.endTimeDesc = util.formatDate(end)
+    }
     logs.unshift(log)
     wx.setStorageSync('logs', logs)
   }

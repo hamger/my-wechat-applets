@@ -14,9 +14,7 @@ Page({
 
   },
   getLogs: function() {
-    // wx.removeStorageSync('logs')
     let logs = wx.getStorageSync('logs')
-    console.log(logs)
     logs.forEach(function(item) {
       item.startTime = new Date(item.startTime).toLocaleString()
     })
