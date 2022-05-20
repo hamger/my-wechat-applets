@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="container-title">饮食记录 <text class="container-title-right">日期</text></view>
+  <view wx:if="{{idx === 0}}">
+    <view wx:if="{{page0Idx === 0}}" class="page0-box">
+      <view wx:for="{{page0List}}" wx:key="index" class="page0-box-item" bindtap="page00tap" data-idx="{{index}}">
+        <image class="section_image" src="{{'../../image/page00' + index + '.png'}}"></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+    <view wx:if="{{page0Idx === 1}}" class="page0-box">
+
+      <view bindtap="estimate">我会估算</view>
+      <view wx:for="{{estimateGiude}}" wx:key="index" class="">
+        <image wx:for="{{item}}" wx:key="index" class="estimate-giude-image" src="{{'../../image/page01' + item + '.png'}}"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{idx === 1}}">
+    page1
+  </view>
+  <view wx:if="{{idx === 2}}">
+    page2
+  </view>
+  <view wx:if="{{idx === 3}}">
+    page3
+  </view>
+  <view wx:if="{{idx === 4}}">
+    page4
+  </view>
+  <view class="container-tabbar">
+    <view wx:for="{{tabBar}}" wx:key="index" class="{{idx === index ? 'container-tabbar-item container-tabbar-item-active' : 'container-tabbar-item'}}" bindtap="changePage" data-idx="{{index}}">{{item}}</view>
+  </view>
+</view>

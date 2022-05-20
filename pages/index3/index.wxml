@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="container-title">请选择您的疾病类型：</view>
+  <image class="section_image" src="../../image/index3-1.png"></image>  
+  <i-input value="{{ value1 }}"  bindchange="handleListChange" title="您最近一次的空腹血糖值" autofocus placeholder="请输入" />
+  <i-button class="submit-btn" bindtap="handleClick" type="success">我填好啦</i-button>
+</view>

@@ -1,0 +1,47 @@
+.container {
+  padding: 0 10px;
+}
+
+.container .container-tabbar {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.page0-box {
+  /* display: flex; */
+  text-align: center;
+}
+
+.page0-box .page0-box-item {
+  display: inline-block;
+  margin: 10px;
+  width: 40%;
+}
+
+.estimate-giude-image {
+  height: 50px;
+}
+
+.container-tabbar .container-tabbar-item:nth-child(n+2) {
+  flex: 1;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+.container-tabbar .container-tabbar-item:first-child {
+  width: 60px;
+  padding: 8px 0;
+  margin-bottom: 10px;
+}
+
+.container-tabbar .container-tabbar-item-active {
+  background-color: rgb(218, 187, 187);
+}
+
+.container .section_image {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "hello-world",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "update": "git add . && git commit -m 'update' && git push"
+    },
+    "dependencies": {},
+    "devDependencies": {
+
+    },
+    "engines": {
+        "install-node": "14.15.4"
+    }
+}

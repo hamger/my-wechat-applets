@@ -5,6 +5,7 @@ const defaultTime = {
 }
 
 App({
+  globalData: {},
   onLaunch: function() {
     let workTime = wx.getStorageSync('workTime')
     let restTime = wx.getStorageSync('restTime')

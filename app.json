@@ -1,40 +1,21 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/setting/setting"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3197ed",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "color": "#dddddd",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/home.png",
-        "selectedIconPath": "image/home-a.png",
-        "text": "主页"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "iconPath": "image/log.png",
-        "selectedIconPath": "image/log-a.png",
-        "text": "记录"
-      },
-      {
-        "pagePath": "pages/setting/setting",
-        "iconPath": "image/setting.png",
-        "selectedIconPath": "image/setting-a.png",
-        "text": "设置"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/index2/index",
+        "pages/index3/index",
+        "pages/index4/index",
+        "pages/index5/index",
+        "pages/turntable/index/index",
+        "pages/tomatoClock/index/index",
+        "pages/tomatoClock/logs/logs",
+        "pages/tomatoClock/setting/setting"
+    ],
+    "entryPagePath": "pages/index5/index",
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3197ed",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json"
 }

@@ -1,31 +1,5 @@
-view,
-sroll-view,
-swiper,
-icon,
-text,
-progress,
-button,
-checkbox,
-form,
-input,
-label,
-input,
-picker,
-radio,
-slider,
-switch,
-action-sheet,
-modal,
-toast,
-loading,
-navigator,
-audio,
-image,
-video,
-map,
-canvas {
-  box-sizing: border-box;
-}
+@import './weui.wxss';
+
 page {
   height: 100%;
 }
@@ -41,10 +15,24 @@ button {
 }
 
 .container {
+  position: relative;
   height: 100%;
   background-color: #f5f5f5;
 }
 
+.container .submit-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+}
+
+.container .container-title {
+  padding: 10px 0px;
+}
+.container-title .container-title-right {
+  padding-left: 68%;
+}
 .panel {
   background: #fff;
   border-radius: 3px;

@@ -1,0 +1,42 @@
+.container {
+  padding: 0 10px;
+}
+
+.container .section_image {
+  width: 120px;
+  height: 120px;
+}
+
+.dialaing {
+  margin-top: 20px;
+  position:relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  /* border:1px solid #000; */
+}
+.dialaing:before{
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  position: absolute;
+  top:-19px;
+  left:20px;
+  border-bottom:20px solid #fff;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+}
+/* .dialaing:after{
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  position: absolute;
+  top:10px;
+  left:10px;
+  border-bottom:7px solid #fff;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+}
+  */

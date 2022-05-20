@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="container-title">请选择您的疾病类型：</view>
+<i-panel>
+    <i-radio-group current="{{current}}" bindchange="handleListChange">
+        <view class="section_item_box" wx:for="{{list}}" wx:key="{{item.id}}" >
+          <image class="section_image" src="{{item.url}}"></image>
+          <i-radio  class="section_text" position="right" value="{{item.name}}">
+          </i-radio>
+        </view>
+    </i-radio-group>
+</i-panel>
+
+<i-button class="submit-btn"  bindtap="handleClick" type="success">登录</i-button>
+</view>

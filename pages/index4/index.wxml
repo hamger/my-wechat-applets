@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="container-title">我的管家：</view>
+  <image class="section_image" src="../../image/index4.png"></image>
+  <view class="dialaing">
+    管家0001号：您好，根据您提供的血糖值，我们预测您有血糖升高的风险，请您注意饮食的合理搭配，我们也会为您提供科学合理的个性化饮食指导方案，请您继续关注哦！
+  </view>
+  <i-button class="submit-btn" bindtap="handleClick" type="success">我知道啦</i-button>
+</view>
