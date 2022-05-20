@@ -46,7 +46,7 @@ Page({
   page00tap(e) {
     const idx = e.currentTarget.dataset['idx']
     this.setData({
-      page0Idx: 4
+      page0Idx: idx
     });
   },
   page2tap(e) {
