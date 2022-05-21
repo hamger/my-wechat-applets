@@ -66,18 +66,18 @@
       <image style="height:500px;" bindtap="page2tap"  data-idx="{{5}}" src="{{'../../image/page250.png'}}"></image>
     </view>
     <view wx:if="{{page2Idx == 5}}">
-      <image style="height:360px;" src="{{'../../image/page260.png'}}"></image>
+      <image style="height:300px;" src="{{'../../image/page260.png'}}"></image>
       <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{6}}">我填好啦</i-button>
     </view>
     <view wx:if="{{page2Idx == 6}}">
-      <image style="height:460px;" src="{{'../../image/page261.png'}}"></image>
+      <image style="height:430px;" src="{{'../../image/page261.png'}}"></image>
       <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{7}}">我填好啦</i-button>
     </view>
     <view wx:if="{{page2Idx == 7}}">
       <view style="margin-bottom:15px;">
         <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
       </view>
-      <image style="height:400px;" src="{{'../../image/page262.png'}}"></image>
+      <image style="height:410px;" src="{{'../../image/page262.png'}}"></image>
     </view>
   </view>
   <view wx:if="{{idx == 3}}">
