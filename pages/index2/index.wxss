@@ -1,7 +1,3 @@
-.container {
-  padding: 0 10px;
-}
-
 .section_item_box {
   display: flex;
   line-height: 60px;

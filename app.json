@@ -4,11 +4,7 @@
         "pages/index2/index",
         "pages/index3/index",
         "pages/index4/index",
-        "pages/index5/index",
-        "pages/turntable/index/index",
-        "pages/tomatoClock/index/index",
-        "pages/tomatoClock/logs/logs",
-        "pages/tomatoClock/setting/setting"
+        "pages/index5/index"
     ],
     "entryPagePath": "pages/index5/index",
     "window": {

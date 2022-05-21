@@ -15,8 +15,13 @@ button {
 
 .container {
     position: relative;
-    height: 100%;
-    background-color: #f5f5f5;
+    padding: 10px;
+    min-height: calc(100vh - 20px);
+    background-color: #fff;
+}
+
+.container .container-title {
+    padding-bottom: 10px;
 }
 
 .container .submit-btn {
@@ -26,12 +31,13 @@ button {
     width: 100%;
 }
 
-.container .container-title {
-    padding: 10px 0px;
-}
-
 .container-title .container-title-right {
     padding-left: 68%;
+}
+
+.active-text {
+  background-color: rgb(242, 136, 136);
+  padding: 2px 0;
 }
 
 .panel {

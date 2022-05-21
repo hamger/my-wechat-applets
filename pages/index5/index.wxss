@@ -1,14 +1,15 @@
-.container {
-  padding: 0 10px;
+.container5 {
+  padding-bottom: 57px;
 }
 
 .container .container-tabbar {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
+  z-index: 1;
 }
 
 .page0-box {
@@ -34,24 +35,15 @@
   height: 50px;
 }
 
-.estimate-giude-image {
-  width: 100%;
-  height: 500px;
+.container-tabbar .container-tabbar-item {
+  padding: 13px 0;
 }
 
 .container-tabbar .container-tabbar-item:nth-child(n+2) {
   flex: 1;
-  padding: 8px 0;
-  margin-bottom: 10px;
 }
 .container-tabbar .container-tabbar-item:first-child {
   width: 60px;
-  padding: 8px 0;
-  margin-bottom: 10px;
-}
-
-.container-tabbar .container-tabbar-item-active {
-  background-color: rgb(218, 187, 187);
 }
 
 .container .section_image {
@@ -60,7 +52,7 @@
 }
 
 .page2-box .page2-box-item {
-  margin: 5px;
+  margin-bottom: 10px;
   border: 1px solid #000;
   border-radius: 8px;
   padding: 10px;
@@ -77,6 +69,9 @@
   left: 120px;
   top: 40px
 }
+.page2-box .page2-box-item:nth-child(4) .text {
+  top: 29px
+}
 
 .page3-box .page3-box-item {
     display: flex;
@@ -87,4 +82,30 @@
   width: 20px;
   height: 20px;
   padding-right: 10px;
+}
+
+.page4-top {
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.page4-top .page4-top-1 {
+  flex: 1;
+}
+.page4-top .page4-top-1 image {
+  height: 80px;
+}
+.page4-top .page4-top-3 image {
+  height: 80px;
+}
+.page4-top .page4-top-2 {
+  flex: 2;
+  padding: 0 10px;
+  line-height: 40px;
+}
+.page4-top .page4-top-3 {
+  flex: 1;
 }

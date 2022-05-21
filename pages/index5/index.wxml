@@ -1,75 +1,129 @@
-<view class="container">
-  <view class="container-title">饮食记录 <text class="container-title-right">日期</text></view>
-  <view wx:if="{{idx === 0}}">
-    <view  wx:if="{{page0Idx === 0}}" class="page0-box">
-      <view wx:for="{{page0List}}" wx:key="index" class="page0-box-item" bindtap="page00tap" data-idx="{{index}}">
+<view class="container container5">
+  <view wx:if="{{idx == 0}}">
+    <view class="container-title"> <text class="active-text">饮食记录</text> <text class="container-title-right">日期</text></view>
+    <view wx:if="{{page0Idx == 0}}" class="page0-box">
+      <view wx:for="{{page0List}}" wx:key="index" class="page0-box-item" bindtap="page0tap" data-idx="{{1}}">
         <image class="section_image" src="{{'../../image/page00' + index + '.png'}}"></image>
         <view>{{item.name}}</view>
       </view>
     </view>
-    <view  wx:if="{{page0Idx === 1}}" class="page0-box">
-      <view bindtap="estimate">我会估算</view>
-      <image class="estimate-giude-image" src="{{'../../image/page010.png'}}"></image>
+    <view wx:if="{{page0Idx == 1}}" class="page0-box">
+      <i-button i-class="i-page-button" type="success" bindtap="page0tap" data-idx="2">我会估算</i-button>
+      <image style="height:530px;" src="{{'../../image/page010.png'}}"></image>
     </view>
-    <view  wx:if="{{page0Idx === 2}}" class="page0-box2">
-      <view wx:for="{{page02List}}" wx:key="index" class="page0-box2-item" bindtap="page00tap" data-idx="{{index}}">
+    <view wx:if="{{page0Idx == 2}}" class="page0-box2">
+      <view wx:for="{{page02List}}" wx:key="index" class="page0-box2-item" >
         <image class="section_image" src="{{'../../image/page02' + index + '.png'}}"></image>
         <view>{{item}}</view>
       </view>
     </view>
   </view>
-  <view wx:if="{{idx === 1}}">
-    <view class="page1-box">
-      <image class="estimate-giude-image" src="{{'../../image/page100.png'}}"></image>
+  <view wx:if="{{idx == 1}}">
+    <view style="margin-bottom:15px;">
+      <text class="active-text">营养报告</text>
     </view>
-  </view>
-  <view wx:if="{{idx === 2}}">
-    <view wx:if="{{page2Idx === -1}}" class="page2-box">
-      <view wx:for="{{page2List}}" wx:key="index" style="background:{{item.color}}" class="page2-box-item" bindtap="page2tap" data-idx="{{index}}">
-        <image class="section_image" src="{{'../../image/page20' + index + '.png'}}"></image>
-        <view class="text">{{item.name}}</view>
+    <view class="page3-box">
+      <view wx:for="{{page1List}}" wx:key="index" class="page3-box-item" data-idx="{{index}}">
+        <image class="page3-box-image" src="{{'../../image/page1-' + (index + 1) + '.png'}}"></image>
+        <view>{{item}}</view>
       </view>
     </view>
-    <view  wx:if="{{page2Idx === 0}}">
+  </view>
+  <view wx:if="{{idx == 2}}">
+    <view style="margin-bottom:15px;">
+      <text class="active-text">我的管家</text>
+    </view>
+    <view wx:if="{{page2Idx == -1}}" class="page2-box">
+      <view wx:for="{{page2List}}" wx:key="index" style="background:{{item.color}}" class="page2-box-item" bindtap="page2tap" data-idx="{{index}}">
+        <image class="section_image" src="{{'../../image/page20' + index + '.png'}}"></image>
+        <view class="text">
+          <rich-text nodes="{{item.name}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{page2Idx == 0}}">
       <image style="height:340px;" src="{{'../../image/page210.png'}}"></image>
     </view>
-    <view  wx:if="{{page2Idx === 1}}">
-      <image  style="height:500px;" src="{{'../../image/page220.png'}}"></image>
+    <view wx:if="{{page2Idx == 1}}">
+      <image style="height:550px;" src="{{'../../image/page220.png'}}"></image>
     </view>
-    <view  wx:if="{{page2Idx === 2}}">
-      <image  style="height:500px;" src="{{'../../image/page230.png'}}"></image>
+    <view wx:if="{{page2Idx == 2}}">
+      <image style="height:500px;" src="{{'../../image/page230.png'}}"></image>
     </view>
-    <view  wx:if="{{page2Idx === 3}}">
-      <image  style="height:160px;" src="{{'../../image/page240.png'}}"></image>
-      <i-button i-class="i-page-button" type="ghost" bindtap="page24tap" data-idx="0">我要选择：45.9/月</i-button>
-      <image  style="height:160px;" src="{{'../../image/page241.png'}}"></image>
-      <i-button i-class="i-page-button" type="ghost" bindtap="page24tap" data-idx="1">我要选择：45.9/月</i-button>
+    <view wx:if="{{page2Idx == 3}}">
+      <view style="margin-bottom:15px;">
+        <text class="active-text">个性化精准营养指导与饮食定制 ：选择营养师</text>
+      </view>
+      <image style="height:160px;" src="{{'../../image/page240.png'}}"></image>
+      <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{4}}">我要选择：45.9/月</i-button>
+      <image style="height:160px;" src="{{'../../image/page241.png'}}"></image>
+      <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{4}}">我要选择：45.9/月</i-button>
     </view>
-    <view  wx:if="{{page2Idx === 4}}">
-      <image style="height:500px;" src="{{'../../image/page250.png'}}"></image>
+    <view wx:if="{{page2Idx == 4}}">
+      <view style="margin-bottom:15px;">
+        <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
+      </view>
+      <image style="height:500px;" bindtap="page2tap"  data-idx="{{5}}" src="{{'../../image/page250.png'}}"></image>
+    </view>
+    <view wx:if="{{page2Idx == 5}}">
+      <image style="height:360px;" src="{{'../../image/page260.png'}}"></image>
+      <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{6}}">我填好啦</i-button>
+    </view>
+    <view wx:if="{{page2Idx == 6}}">
+      <image style="height:460px;" src="{{'../../image/page261.png'}}"></image>
+      <i-button i-class="i-page-button" type="success" bindtap="page2tap" data-idx="{{7}}">我填好啦</i-button>
+    </view>
+    <view wx:if="{{page2Idx == 7}}">
+      <view style="margin-bottom:15px;">
+        <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
+      </view>
+      <image style="height:400px;" src="{{'../../image/page262.png'}}"></image>
     </view>
   </view>
-  <view wx:if="{{idx === 3}}">
-    <view wx:if="{{page3Idx === -1}}" class="page3-box">
-      <view wx:for="{{page3List}}" wx:key="index" class="page3-box-item" bindtap="page3tap" data-idx="{{index}}" >
+  <view wx:if="{{idx == 3}}">
+    <view style="margin-bottom:15px;">
+      <text class="active-text">掌上服务</text>
+    </view>
+    <view wx:if="{{page3Idx == -1}}" class="page3-box">
+      <view wx:for="{{page3List}}" wx:key="index" class="page3-box-item" bindtap="page3tap" data-idx="{{index}}">
         <image class="page3-box-image" src="{{'../../image/page30' + index + '.png'}}"></image>
         <view>{{item}}</view>
       </view>
     </view>
-    <view  wx:if="{{page3Idx === 1}}">
-      <image style="height:500px;" src="{{'../../image/page310.png'}}"></image>
+    <view wx:if="{{page3Idx == 1}}">
+      <image style="height:350px;" src="{{'../../image/page310.png'}}"></image>
     </view>
-    <view  wx:if="{{page3Idx === 3}}">
-      <image style="height:500px;" src="{{'../../image/page330.png'}}"></image>
+    <view wx:if="{{page3Idx == 3}}">
+      <image style="height270px;" src="{{'../../image/page330.png'}}"></image>
     </view>
-    <view  wx:if="{{page3Idx === 4}}">
-      <image style="height:500px;" src="{{'../../image/page340.png'}}"></image>
+    <view wx:if="{{page3Idx == 4}}">
+      <image style="height:400px;" src="{{'../../image/page340.png'}}"></image>
     </view>
   </view>
-  <view wx:if="{{idx === 4}}">
-     <image style="height:360px;" src="{{'../../image/page400.png'}}"></image>
+  <view wx:if="{{idx == 4}}">
+    <view style="margin-bottom:15px;">
+      <text class="active-text">个人中心</text>
+    </view>
+    <view class="page4-top">
+      <view class="page4-top-1">
+        <image src="{{'../../image/page4-1.png'}}"></image>
+      </view>
+      <view class="page4-top-2">
+        <view>管家0001</view>
+        <view>ID：123456</view>
+      </view>
+      <view class="page4-top-3">
+        <image src="{{'../../image/page4-2.png'}}"></image>
+      </view>
+    </view>
+    <view class="page3-box">
+      <view wx:for="{{page4List}}" wx:key="index" class="page3-box-item" data-idx="{{index}}">
+        <image class="page3-box-image" src="{{'../../image/page40' + index + '.png'}}"></image>
+        <view>{{item}}</view>
+      </view>
+    </view>
   </view>
   <view class="container-tabbar">
-    <view wx:for="{{tabBar}}" wx:key="index" class="{{idx === index ? 'container-tabbar-item container-tabbar-item-active' : 'container-tabbar-item'}}" bindtap="changePage" data-idx="{{index}}">{{item}}</view>
+    <view wx:for="{{tabBar}}" wx:key="index" class="{{idx == index ? 'container-tabbar-item active-text' : 'container-tabbar-item'}}" bindtap="changePage" data-idx="{{index}}">{{item}}</view>
   </view>
 </view>
