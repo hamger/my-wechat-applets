@@ -1,6 +1,6 @@
 <view class="container container5">
   <view wx:if="{{idx == 0}}">
-    <view class="container-title"> <text class="active-text">饮食记录</text> <text class="container-title-right">日期</text></view>
+    <view class="container-title"> <text class="active-text">饮食记录</text><text class="container-title-right">日期</text></view>
     <view wx:if="{{page0Idx == 0}}" class="page0-box">
       <view wx:for="{{page0List}}" wx:key="index" class="page0-box-item" bindtap="page0tap" data-idx="{{1}}">
         <image class="section_image" src="{{'../../image/page00' + index + '.png'}}"></image>
@@ -63,7 +63,7 @@
       <view style="margin-bottom:15px;">
         <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
       </view>
-      <image style="height:500px;" bindtap="page2tap"  data-idx="{{5}}" src="{{'../../image/page250.png'}}"></image>
+      <image style="height:440px;" bindtap="page2tap"  data-idx="{{5}}" src="{{'../../image/page250.png'}}"></image>
     </view>
     <view wx:if="{{page2Idx == 5}}">
       <image style="height:300px;" src="{{'../../image/page260.png'}}"></image>
