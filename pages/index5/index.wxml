@@ -13,7 +13,7 @@
     </view>
     <view wx:if="{{page0Idx == 2}}" class="page0-box2">
       <view wx:for="{{page02List}}" wx:key="index" class="page0-box2-item" >
-        <image class="section_image" src="{{'../../image/page02' + index + '.png'}}"></image>
+        <image style="{{ index == 6 ? 'width:20px;' : '' }}" class="section_image" src="{{'../../image/page02' + index + '.png'}}"></image>
         <view>{{item}}</view>
       </view>
     </view>
