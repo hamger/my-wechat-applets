@@ -77,7 +77,13 @@
       <view style="margin-bottom:15px;">
         <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
       </view>
-      <image style="height:410px;" src="{{'../../image/page262.png'}}"></image>
+      <image style="height:410px;" src="{{'../../image/page262.png'}}" bindtap="page2tap" data-idx="{{8}}"></image>
+    </view>
+    <view wx:if="{{page2Idx == 8}}">
+      <view style="margin-bottom:15px;">
+        <text class="active-text">个性化精准营养指导与饮食定制：我的营养师</text>
+      </view>
+      <image style="height:360px;" src="{{'../../image/page263.png'}}"></image>
     </view>
   </view>
   <view wx:if="{{idx == 3}}">

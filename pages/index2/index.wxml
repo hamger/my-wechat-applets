@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="container-title">请选择您的疾病类型：</view>
+  <view class="container-title">请选择您的身份：</view>
   <i-panel>
     <i-radio-group current="{{current}}" bindchange="handleListChange">
       <view class="section_item_box" wx:for="{{list}}" wx:key="{{item.id}}">
